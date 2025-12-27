@@ -20,7 +20,7 @@ class XroarGenerator(Generator):
 
     def generate(self, system, rom, playersControllers, metadata, guns, wheels, gameResolution):
 
-        commandArray = ["xroar", -rompath, "/userdata/bios:/userdata/bios/xroar", -default-machine, "coco2bus", rom]
+        commandArray = ["xroar", "-rompath", "/userdata/bios:/userdata/bios/xroar", "-fs", "-default-machine", "coco2bus", rom]
         return Command.Command(array=commandArray)
 
     def getMouseMode(self, config, rom):
